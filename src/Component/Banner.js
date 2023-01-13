@@ -9,7 +9,7 @@ import { Autoplay, Navigation } from 'swiper';
 export default function Banner() {
   const path = process.env.PUBLIC_URL;
   return (
-    <div className="banner" style={{ width: '1300px', margin: '60px auto' }}>
+    <div className="banner" style={{ width: '1300px', margin: '60px auto', cursor: 'pointer' }}>
       <Swiper
         pagination={{
           type: 'fraction',

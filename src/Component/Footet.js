@@ -2,26 +2,26 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Footet() {
-  const path = process.env.PUBLIC_URL;
+  const Path = process.env.PUBLIC_URL;
   return (
     <div className="footer" style={{ fontSize: '.7em', backgroundColor: '#2e2e2e', color: '#999999' }}>
       <div className="footer_top">
         <div className="footer_top_left">
           <ul>
             <li>
-              <img src="./images/copyright_logo.png" />
+              <img src={Path + '/images/copyright_logo.png'} />
             </li>
             <li>
               <Link to="/">회사소개</Link>
             </li>
             <li>
-              <img src="./images/ft_line.png" />
+              <img src={Path + '/images/ft_line.png'} />
             </li>
             <li>
               <Link to="/">개인정보처리방침</Link>
             </li>
             <li>
-              <img src="./images/ft_line.png" />
+              <img src={Path + '/images/ft_line.png'} />
             </li>
             <li>
               <Link to="/">관리자페이지</Link>
@@ -59,13 +59,13 @@ function Footet() {
         <div class="footer_bottom_right">
           <ul>
             <li>
-              <img src="./images/kakao.png" />
+              <img src={Path + '/images/kakao.png'} />
             </li>
             <li>
-              <img src="./images/facebook.png" />
+              <img src={Path + '/images/facebook.png'} />
             </li>
             <li>
-              <img src="./images/insta.png" />
+              <img src={Path + '/images/insta.png'} />
             </li>
           </ul>
         </div>

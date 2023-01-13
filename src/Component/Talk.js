@@ -13,7 +13,7 @@ function Talk(props) {
           </Map>
         </div>
         <div className="colorbox">
-          <dl>
+          <dl style={{ fontSize: '16px', fontWeight: '300' }}>
             <dt>· 주소</dt>
             <dd>대구광역시 OOO OOOO</dd>
             <dt>· 전화</dt>

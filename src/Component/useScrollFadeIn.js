@@ -6,13 +6,13 @@ const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0) => {
   const handleDirection = name => {
     switch (name) {
       case 'up':
-        return 'translate3d(0, 50%, 0)';
+        return 'translate3d(0, 50px, 0)';
       case 'down':
-        return 'translate3d(0, -50%, 0)';
+        return 'translate3d(0, -50px, 0)';
       case 'left':
-        return 'translate3d(50%, 0, 0)';
+        return 'translate3d(50px, 0, 0)';
       case 'right':
-        return 'translate3d(-50%, 0, 0)';
+        return 'translate3d(-50px, 0, 0)';
       default:
         return;
     }
@@ -37,7 +37,7 @@ const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0) => {
     let observer;
 
     if (element.current) {
-      observer = new IntersectionObserver(onScroll, { threshold: 0.7 });
+      observer = new IntersectionObserver(onScroll, { root: null, rootMargin: '0px', threshold: 0.4 });
       observer.observe(element.current);
     }
 
