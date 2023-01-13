@@ -1,14 +1,17 @@
 import React from 'react';
+import useScrollFadeIn from './useScrollFadeIn';
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
+import styled from 'styled-components';
 
-function Talk(props) {
+function Talk() {
+  const animatedItem = useScrollFadeIn('up', 1);
   return (
-    <div className="talk">
+    <div className="talk" {...animatedItem} style={{ cursor: 'pointer' }}>
       <h1>고객상담</h1>
       <p>디자인코코의 새로운 소식을 전해드립니다.</p>
       <div className="mapBox">
         <div className="minimap" style={{ backgroundColor: '#ddd' }}>
-          <Map center={{ lat: 33.5563, lng: 126.79581 }} style={{ width: '100%', height: '360px' }}>
+          <Map center={{ lat: 33.5563, lng: 126.79581 }} style={{ width: '100%', height: '400px' }}>
             <MapMarker position={{ lat: 33.55635, lng: 126.795841 }}></MapMarker>
           </Map>
         </div>

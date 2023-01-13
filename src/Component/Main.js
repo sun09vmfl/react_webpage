@@ -10,6 +10,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper';
 import styled from 'styled-components';
 
 import './style.scss';
+import './style.css';
 
 const Container = styled.div`
   color: #ddd;
@@ -75,7 +76,8 @@ function Swiper1() {
         }}
         navigation
         loop={true}
-        className="mySwiper"
+        className="mySwiper size"
+        style={{ height: '1079px' }}
       >
         {data.map(img => (
           <SwiperSlide key={img.id} style={{ display: 'relative' }}>

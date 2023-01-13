@@ -1,0 +1,7 @@
+:root {
+  --swiper-theme-color: #ddd;
+}
+
+.swiper-button-next {
+  padding-right: 80px;
+}

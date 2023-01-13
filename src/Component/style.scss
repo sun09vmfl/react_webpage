@@ -134,37 +134,50 @@
     margin: 50px auto;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     // align-items: center;
-    .servicebox {
-      padding-left: 30px;
-      img {
-        width: 300px;
-      }
-      img:hover {
-        transition: 0.6s;
-        transform: scale(1.03);
-      }
-      h3 {
-        text-align: start;
-        padding: 20px 0;
-        font-size: 1.2em;
-        font-weight: 500;
-      }
-      p {
-        width: 300px;
-        text-align: left;
-        padding: 0;
-        color: #666666;
-        line-height: 1.2;
-        font-size: 15px;
-        font-weight: 400;
-      }
-      button {
-        margin-top: 20px;
-        padding: 10px 30px;
-        border: 1px solid #999999;
-        color: #666666;
-        background-color: #fff;
+    li {
+      width: 300px;
+
+      .servicebox {
+        padding-left: 30px;
+        .imgwrapper {
+          height: 378px;
+          box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.032), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.047), 12.5px 12.5px 10px rgba(0, 0, 0, 0.056),
+            22.3px 22.3px 17.9px rgba(0, 0, 0, 0.061), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.065), 100px 100px 80px rgba(0, 0, 0, 0.07);
+          overflow: hidden;
+          img {
+            width: 300px;
+            transition: 0.6s;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        h3 {
+          text-align: start;
+          padding: 20px 0;
+          font-size: 1.2em;
+          font-weight: 500;
+        }
+        p {
+          // width: 300px;
+          text-align: left;
+          padding: 0;
+          letter-spacing: 1px;
+          color: #666666;
+          line-height: 1.2;
+          font-size: 15px;
+          font-weight: normal;
+        }
+        button {
+          margin-top: 20px;
+          padding: 10px 30px;
+          border: 1px solid #999999;
+          color: #666666;
+          background-color: #fff;
+        }
       }
     }
   }
@@ -306,10 +319,25 @@
       }
     }
   }
+  .banners {
+    width: 176px;
+    height: 70px;
+    img {
+      width: 176px;
+      height: 70px;
+    }
+  }
 
-  .swiper {
-    width: 100%;
-    height: 100%;
+  :root {
+    --swiper-theme-color: #1e1e1e;
+  }
+  .mySwiper {
+    .swiper-button-prev {
+      &::after {
+        margin-right: 10px;
+        color: #1e1e1e;
+      }
+    }
   }
 
   .swiper-slide {

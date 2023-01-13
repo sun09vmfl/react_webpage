@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useScrollFadeIn from './useScrollFadeIn';
 
-function Info(props) {
+function Info() {
   const animatedItem = useScrollFadeIn('up', 1);
   const infos = [
     { id: 1, title: '디자인코코의 공지사항 테스트글입니다.', date: '2023-01-01' },
@@ -21,7 +21,8 @@ function Info(props) {
           {infos.map(item => {
             return (
               <tr key={item.id}>
-                <th>{item.title}</th> <td>{item.date}</td>
+                <th>{item.title}</th>
+                <td>{item.date}</td>
               </tr>
             );
           })}
